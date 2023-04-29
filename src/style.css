@@ -35,3 +35,24 @@ li {
   font-weight: 100;
   list-style: none;
 }
+
+.overview {
+  margin-bottom: 20px;
+}
+.weather-temperature .img {
+  margin-right: 20px;
+  height: 64px;
+  width: 64px;
+}
+
+.weather-temperature strong {
+  color: blue;
+  font-size: 65px;
+  font-weight: 400;
+  line-height: 1;
+}
+.weather-temperature .units {
+  font-size: 16px;
+  position: relative;
+  top: -34px;
+}

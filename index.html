@@ -19,10 +19,10 @@
       <div class="weather-wrapper">
         <div class="weatherApp">
           <div class="overview">
-        <h1>Edinburgh</h1>
+        <h1> Edinburgh</h1>
         <ul>
-          <li>Saturday</li>
-          <li>Rain</li>
+          <li id="date"></li>
+          <li id="description"></li>
         </ul>
         </div>
         <div class="row">
@@ -32,15 +32,15 @@
               src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
               alt="Rain" id="icon"/>
               <div>
-            <strong>5</strong><span class="units">°C|°F</span>
+            <strong id="temperature"></strong> </strong><span class="units">°C|°F</span>
           </div>
           </div>
         </div>
           <div class="col-6">
             <ul>
-              <li>Precipitation: 0%</li>
-              <li>Humidity:%</li>
-              <li>Wind:%</li>
+              <li>Feel Like <span id="feelsLike"></span></li>
+              <li>Humidity <span id="humidity"></span>%</li>
+              <li>Wind <span id="wind"></span> %</li>
             </ul>
           </div>
         </div>

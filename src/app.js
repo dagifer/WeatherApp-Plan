@@ -40,13 +40,16 @@ let month = months[now.getMonth()];
 let year = now.getFullYear();
 
 let currentDate = document.querySelector("#date");
-currentDate.innerHTML = `${date} ${month} ${year} ${hours}:${minutes}`;
+currentDate.innerHTML = `${date}, ${month} ${year} ${hours}:${minutes}`;
 
 function showWetaher(response) {
   console.log(response);
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.temperature.current
   );
+
+  document.querySelector("#city").innerHTML = response.data.city;
+
   document.querySelector("#description").innerHTML =
     response.data.condition.description;
 
@@ -73,6 +76,12 @@ function showWetaher(response) {
     .setAttribute("alt", response.data.condition.description);
 }
 
+function handleSumit(event) {
+  event.preventDefault();
+  let cityElement = document.querySelector("#city-input");
+  searchCity(cityElement.value);
+}
+
 function searchCity(city) {
   let apiKey = "o36b6dafeb6ef56f34fa0t0eceebce4e";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
@@ -86,5 +95,8 @@ function showLocation(position) {
 
   axios.get(`${apiUrl}`).then(showWetaher);
 }
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSumit);
 
 searchCity("Edinburgh");

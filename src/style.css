@@ -9,8 +9,14 @@ body {
   max-width: 600px;
   margin: 30px auto;
   padding: 20px;
-  border: 1px solid #70757a;
+  border: 1px solid rgb(43, 43, 211);
   border-radius: 5px;
+  background-image: url("cha\ 7.jpg");
+  background-size: cover;
+}
+
+.weatherApp::before {
+  opacity: 0.5;
 }
 
 h1 {
@@ -30,10 +36,11 @@ li {
   color: #70757a;
   margin: 0;
   padding: 0;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 16px;
   font-weight: 100;
   list-style: none;
+  text-transform: capitalize;
 }
 
 .overview {
@@ -46,10 +53,10 @@ li {
 }
 
 .weather-temperature strong {
-  color: blue;
+  color: rgb(43, 43, 211);
   font-size: 65px;
   font-weight: 400;
-  line-height: 1;
+  line-height: -1;
 }
 .weather-temperature .units {
   font-size: 16px;
